@@ -89,7 +89,7 @@
         
         async function aggiornaNumeri() {
             try {
-                const response = await fetch('./numeri.txt');
+                const response = await fetch('./numeri.txt?cacheBuster=${new Date().getTime()}');
                 if (!response.ok) throw new Error('File non trovato o accesso negato');
                 const data = await response.text();
                 const numeri = data.trim().split('\n');
