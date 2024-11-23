@@ -125,7 +125,11 @@
         }
 
         aggiornaNumeri();
-        setInterval(aggiornaNumeri, 2000);
+        //setInterval(aggiornaNumeri, 2000);
+        setInterval(() => {
+    aggiornaNumeri();
+}, 2000); // Ogni 2 secondi
+
         cicloHover();
     </script>
 </body>
